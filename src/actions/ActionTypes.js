@@ -1,2 +1,3 @@
 export const SUBMIT_LOGIN_FORM = 'SUBMIT_LOGIN_FORM';
-export const WALLET_FORM = 'WALLET_FORM';
+export const GET_PRICE = 'GET_PRICE';
+export const SAVE_CURRENCIES = 'SAVE_CURRENCIES';
