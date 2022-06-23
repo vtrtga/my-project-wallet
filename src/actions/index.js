@@ -23,20 +23,23 @@ export const getPrice = (exchangeRates, state) => ({
 
 export const saveCurrencies = (currencies) => ({
   type: SAVE_CURRENCIES,
-  currencies: Object.keys(currencies),
+  currencies,
 });
 
 export function fetchCurrencies() {
-  return (dispatch) => {
-    fetch('https://economia.awesomeapi.com.br/json/all')
-      .then((response) => response.json())
-      .then((currencies) => dispatch(saveCurrencies(currencies)));
+  return async (dispatch) => {
+    const resp = await fetch('https://economia.awesomeapi.com.br/json/all');
+    const data = await resp.json();
+    const curr = Object.keys(data).filter((c) => c !== 'USDT');
+    console.log(curr);
+    dispatch(saveCurrencies(curr));
   };
 }
-export function fetchPrice(state) {
-  return (dispatch) => {
-    fetch('https://economia.awesomeapi.com.br/json/all')
-      .then((response) => response.json())
-      .then((currencies) => dispatch(getPrice(currencies, state)));
+export function fetchPrice(payload) {
+  return async (dispatch) => {
+    const resp = fetch('https://economia.awesomeapi.com.br/json/all');
+    const data = resp.json();
+    payload.exchangeRates = { ...data };
+    dispatch(getPrice(payload));
   };
 }

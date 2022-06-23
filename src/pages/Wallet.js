@@ -1,8 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { fetchCurrencies } from '../actions';
 import Header from '../components/Header';
 
 class Wallet extends React.Component {
+  async componentDidMount() {
+    const { thunkCurrencies } = this.props;
+    thunkCurrencies();
+  }
+
   render() {
+    console.log(this.props);
     return (
       <div>
         <Header />
@@ -10,5 +19,12 @@ class Wallet extends React.Component {
     );
   }
 }
+const mapDispatchToProps = (dispatch) => ({
+  thunkCurrencies: () => dispatch(fetchCurrencies()),
+});
 
-export default Wallet;
+Wallet.propTypes = {
+  thunkCurrencies: PropTypes.func.isRequired,
+};
+export default connect(null, mapDispatchToProps)(Wallet);
+// export default Wallet;
