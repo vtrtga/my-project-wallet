@@ -1,0 +1,2 @@
+export const SUBMIT_LOGIN_FORM = 'SUBMIT_LOGIN_FORM';
+export const WALLET_FORM = 'WALLET_FORM';
