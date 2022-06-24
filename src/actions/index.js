@@ -15,9 +15,8 @@ export const createWalletActions = (value) => ({
   payload: value,
 });
 
-export const getPrice = (exchangeRates, state) => ({
+export const getPrice = (state) => ({
   type: GET_PRICE,
-  exchangeRates,
   state,
 });
 
@@ -31,14 +30,13 @@ export function fetchCurrencies() {
     const resp = await fetch('https://economia.awesomeapi.com.br/json/all');
     const data = await resp.json();
     const curr = Object.keys(data).filter((c) => c !== 'USDT');
-    console.log(curr);
     dispatch(saveCurrencies(curr));
   };
 }
 export function fetchPrice(payload) {
   return async (dispatch) => {
-    const resp = fetch('https://economia.awesomeapi.com.br/json/all');
-    const data = resp.json();
+    const resp = await fetch('https://economia.awesomeapi.com.br/json/all');
+    const data = await resp.json();
     payload.exchangeRates = { ...data };
     dispatch(getPrice(payload));
   };
