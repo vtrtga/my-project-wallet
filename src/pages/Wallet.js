@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { fetchCurrencies } from '../actions';
 import Header from '../components/Header';
+import Table from '../components/Table';
 
 class Wallet extends React.Component {
   async componentDidMount() {
@@ -11,10 +12,10 @@ class Wallet extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div>
         <Header />
+        <Table />
       </div>
     );
   }
