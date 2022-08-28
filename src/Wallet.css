@@ -1,0 +1,49 @@
+.Wallet {
+
+  /* background-color: black; */
+}
+
+.Header {
+  align-items: baseline;
+  background-color: black;
+  color: white;
+  display: inline-block;
+}
+
+.currency {
+
+}
+
+.Form {
+  background-color: gray;
+}
+
+.Form input {
+  color: black;
+  display: inline-block;
+  margin: 10px;
+}
+
+.Form button {
+  margin: 10px;
+}
+
+.Form input {
+  color: black;
+  display: inline-block;
+  margin: 10px;
+}
+
+.Form button {
+  margin: 10px;
+}
+
+.Table td {
+  border: solid black 1px;
+}
+
+.Table button {
+  background-color: rgb(15, 1, 1);
+  color: white;
+}
+

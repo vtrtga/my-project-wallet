@@ -1,0 +1,45 @@
+* {
+  font-family: 'Source Code Pro', monospace;
+}
+
+
+.area-login {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.Login {
+  background-color: #181920;
+  border: solid #efefef4d;
+  color: white;
+  height: 320px;
+  text-align: center;
+  width: 355px;
+}
+
+.Login label {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Login button {
+  background-color: black;
+  color: white;
+  height: 2cm;
+  margin-top: 30px;
+  width: 5cm;
+}
+
+.Login input {
+  color: black;
+}
+
+.Login input {
+  border-radius: 8px;
+  margin: 10px;
+}
+

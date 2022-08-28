@@ -14,9 +14,8 @@ class Table extends Component {
       'Moeda de conversão',
       'Editar/Excluir'];
     const { expenses } = this.props;
-    console.log(expenses.exchangeRates);
     return (
-      <table>
+      <table className="Table">
         <tr>
           {
             tableParams.map((param) => <th key={ param }>{ param }</th>)

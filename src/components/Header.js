@@ -11,16 +11,16 @@ class Header extends Component {
       return acc + (curr.value * exchange);
     }, 0);
     return (
-      <header>
-        <span data-testid="email-field">{ email }</span>
-        <strong data-testid="total-field">
+      <header className="Header">
+        <span className="email" data-testid="email-field">{ email }</span>
+        <strong className="total-field" data-testid="total-field">
           {
             expenses.length === 0 ? 0
               : total.toFixed(2)
           }
 
         </strong>
-        <strong data-testid="header-currency-field">BRL</strong>
+        <strong className="currency" data-testid="header-currency-field">BRL</strong>
         <Form />
       </header>
     );

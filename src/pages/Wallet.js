@@ -13,7 +13,7 @@ class Wallet extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="Wallet">
         <Header />
         <Table />
       </div>

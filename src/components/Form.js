@@ -42,7 +42,7 @@ class Form extends Component {
     const paymentMethods = ['Dinheiro', 'Cartão de crédito', 'Cartão de débito'];
     const categories = ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
     return (
-      <form>
+      <form className="Form">
         <input
           placeholder="Descrição"
           value={ description }
