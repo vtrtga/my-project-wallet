@@ -4,14 +4,9 @@
 }
 
 .Header {
-  align-items: baseline;
   background-color: black;
+  border: 10px;
   color: white;
-  display: inline-block;
-}
-
-.currency {
-
 }
 
 .Form {
@@ -20,7 +15,6 @@
 
 .Form input {
   color: black;
-  display: inline-block;
   margin: 10px;
 }
 
@@ -30,7 +24,6 @@
 
 .Form input {
   color: black;
-  display: inline-block;
   margin: 10px;
 }
 

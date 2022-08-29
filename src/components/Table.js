@@ -16,7 +16,7 @@ class Table extends Component {
     const { expenses } = this.props;
     return (
       <table className="Table">
-        <tr>
+        <tr className="params">
           {
             tableParams.map((param) => <th key={ param }>{ param }</th>)
           }
